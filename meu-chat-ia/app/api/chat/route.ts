@@ -7,7 +7,6 @@ const ollama = createOpenAI({
 });
 
 export async function POST(req: Request) {
-    console.log("🟢 [1] Rota /api/chat foi chamada pelo frontend!");
 
     try {
         const body = await req.json();
@@ -30,6 +29,6 @@ export async function POST(req: Request) {
 
     } catch (error) {
 
-        return new Response(JSON.stringify({ error: "Erro interno no servidor" }), { status: 500 });
+        return new Response(JSON.stringify({ error: "Erro interno  " }), { status: 500 });
     }
 }
